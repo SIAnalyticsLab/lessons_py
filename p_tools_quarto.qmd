@@ -19,7 +19,7 @@ execute:
 
 A significant part of your role as a data analyst involves communicating results to others through reports. **Quarto** is one of the most powerful and versatile tools for producing such reports. It enables you to generate dynamic documents by combining formatted text and results produced by code. With Quarto, you can create documents in various formats such as HTML, PDF, Word, PowerPoint slides, web dashboards, and many others.
 
-Most of our documents in the GRAPH courses are actually written in Quarto!
+Most of our documents in the SI Analytics are actually written in Quarto!
 
 In this lesson, we will cover the basics of this powerful tool.
 
