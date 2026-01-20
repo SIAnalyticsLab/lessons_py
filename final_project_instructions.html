@@ -8,7 +8,7 @@
 
 <meta name="author" content="SI Analytics">
 
-<title>Folders and Virtual Environments</title>
+<title>Python for Data Analysis &amp; Visualization Final Project : Statistics Dashboard with Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,88 +21,32 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="p_tools_venv_files/libs/clipboard/clipboard.min.js"></script>
-<script src="p_tools_venv_files/libs/quarto-html/quarto.js"></script>
-<script src="p_tools_venv_files/libs/quarto-html/popper.min.js"></script>
-<script src="p_tools_venv_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="p_tools_venv_files/libs/quarto-html/anchor.min.js"></script>
-<link href="p_tools_venv_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="p_tools_venv_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="p_tools_venv_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="p_tools_venv_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="p_tools_venv_files/libs/bootstrap/bootstrap-8a79a254b8e706d3c925cde0a310d4f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="final_project_instructions_files/libs/clipboard/clipboard.min.js"></script>
+<script src="final_project_instructions_files/libs/quarto-html/quarto.js"></script>
+<script src="final_project_instructions_files/libs/quarto-html/popper.min.js"></script>
+<script src="final_project_instructions_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="final_project_instructions_files/libs/quarto-html/anchor.min.js"></script>
+<link href="final_project_instructions_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="final_project_instructions_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="final_project_instructions_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="final_project_instructions_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="final_project_instructions_files/libs/bootstrap/bootstrap-8a79a254b8e706d3c925cde0a310d4f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
-<link rel="stylesheet" href="si-analytics.css">
 </head>
 
-<body>
+<body class="fullcontent">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
-<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2</span> Learning Objectives</a></li>
-  <li><a href="#creating-a-new-workspace" id="toc-creating-a-new-workspace" class="nav-link" data-scroll-target="#creating-a-new-workspace"><span class="header-section-number">3</span> Creating a New Workspace</a>
-  <ul class="collapse">
-  <li><a href="#vocab-environments-interpreter" id="toc-vocab-environments-interpreter" class="nav-link" data-scroll-target="#vocab-environments-interpreter"><span class="header-section-number">3.1</span> Vocab: Environments &amp; Interpreter</a></li>
-  </ul></li>
-  <li><a href="#creating-a-virtual-environment" id="toc-creating-a-virtual-environment" class="nav-link" data-scroll-target="#creating-a-virtual-environment"><span class="header-section-number">4</span> Creating a Virtual Environment</a></li>
-  <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link" data-scroll-target="#installing-packages"><span class="header-section-number">5</span> Installing Packages</a></li>
-  <li><a href="#summary-of-key-steps" id="toc-summary-of-key-steps" class="nav-link" data-scroll-target="#summary-of-key-steps"><span class="header-section-number">6</span> Summary of Key Steps</a></li>
-  <li><a href="#demonstrating-environment-isolation" id="toc-demonstrating-environment-isolation" class="nav-link" data-scroll-target="#demonstrating-environment-isolation"><span class="header-section-number">7</span> Demonstrating Environment Isolation</a></li>
-  <li><a href="#installing-course-packages" id="toc-installing-course-packages" class="nav-link" data-scroll-target="#installing-course-packages"><span class="header-section-number">8</span> Installing Course Packages</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">9</span> Conclusion</a></li>
-  </ul>
-</nav>
-</div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-</div>
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Folders and Virtual Environments</h1>
+<h1 class="title">Python for Data Analysis &amp; Visualization Final Project : Statistics Dashboard with Quarto</h1>
 </div>
 
 
@@ -125,124 +69,104 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introduction" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
-<p>In this lesson, we will explore virtual environments in Python using Visual Studio Code (VS Code). We’ll create a new workspace, set up a virtual environment, and install packages specific to our project.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Welcome to the final project of the Python for Data Analysis and Visualization course! For this project, you will build a multi-page dashboard that explores and visualizes real-world data from Gapminder. This is an opportunity to consolidate your skills in data manipulation, visualization and dashboard creation, while creating a portfolio-worthy project that you can share with future employers.</p>
 </section>
-<section id="learning-objectives" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2</span> Learning Objectives</h2>
-<p>By the end of this lesson, you should be able to:</p>
+<section id="project-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="project-requirements">Project Requirements</h2>
+<section id="data-selection" class="level3">
+<h3 class="anchored" data-anchor-id="data-selection">Data Selection</h3>
 <ul>
-<li>Create a new workspace in VS Code</li>
-<li>Understand the concept of virtual environments</li>
-<li>Create and use a virtual environment in VS Code</li>
-<li>Install and use packages within a virtual environment</li>
+<li><p>Choose at least TWO indicators from <a href="https://gapminder.org/data">Gapminder’s data repository</a>.</p></li>
+<li><p>You can subset to a single year or include multiple years in your analysis.</p></li>
+<li><p>If you would rather work with alternative datasets, perhaps those more relevant to your work, send an email to us at contact@sianalytics.org with your proposal. As long as your final dashboard meets the rubric requirements below, it could be a good alternative.</p></li>
 </ul>
 </section>
-<section id="creating-a-new-workspace" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="creating-a-new-workspace"><span class="header-section-number">3</span> Creating a New Workspace</h2>
-<p>On your desktop or in your <code>Documents</code> folder, create a new folder and name it <code>si_analytics_python</code>. This is going to be the main folder for many of the projects for this course so make sure you put it in an easy to reach place.</p>
-<p>Open VS Code.</p>
-<p>Go to <strong>File &gt; Open Folder</strong>.</p>
-<p>Navigate to the <code>si_analytics_python</code> folder you just created and select it.</p>
-<p>Now create a new script and call it <code>test_cowsay.py</code>.</p>
-<p>Type <code>print(2 + 2)</code> in the file then run it by clicking the run button to make sure everything is working.</p>
-<p>Next, let’s try to import a package we haven’t installed yet. Add the following line to your file:</p>
-<div id="a64a1b81" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cowsay</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cowsay.cow(<span class="st">"Hello, World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>If you try to run this, you’ll get an error.</p>
-<p>This will not work because we haven’t installed the <code>cowsay</code> package yet. And to install it properly, we’ll need to use virtual environments.</p>
-<section id="vocab-environments-interpreter" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="vocab-environments-interpreter"><span class="header-section-number">3.1</span> Vocab: Environments &amp; Interpreter</h3>
+<section id="dashboard-structure" class="level3">
+<h3 class="anchored" data-anchor-id="dashboard-structure">Dashboard Structure</h3>
+<p>Your dashboard should contain AT LEAST THREE pages, with at least the following pages:</p>
+<ol type="1">
+<li>First Indicator Analysis</li>
+<li>Second Indicator Analysis</li>
+<li>Relationship between the two indicators. No statistical analysis is required; this can be purely descriptive/graphical.</li>
+</ol>
+</section>
+<section id="technical-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="technical-requirements">Technical Requirements</h3>
 <ul>
-<li>An <strong>environment</strong> is a folder that contains a specific version of Python and any packages you install.</li>
-<li>The <strong>Python Interpreter</strong> is the specific</li>
+<li>The dashboard should include at least 12 display elements</li>
+<li>Elements include:
+<ul>
+<li>Value boxes</li>
+<li>Interactive plots</li>
+<li>Tables</li>
+<li>Maps</li>
+<li>Text boxes with descriptions of key insights</li>
+</ul></li>
+<li>You should demonstrate your ability to use a range of pandas methods/functions. (Polars or Ibis are also acceptable.)</li>
+<li>You should demonstrate your ability to create a range of plotly visualizations. (Matplotlib, plotnine, seaborn, etc. are also acceptable.)</li>
 </ul>
 </section>
+<section id="submission" class="level3">
+<h3 class="anchored" data-anchor-id="submission">Submission</h3>
+<p>You will be asked to upload your quarto file to the submission page AND provide a link to the deployed dashboard.</p>
 </section>
-<section id="creating-a-virtual-environment" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="creating-a-virtual-environment"><span class="header-section-number">4</span> Creating a Virtual Environment</h2>
-<ol type="1">
-<li>Open the <strong>Command Palette</strong></li>
-<li>Type <code>Python: Create Environment</code> and select it.</li>
-<li>Choose <strong>Venv</strong> as the environment type.</li>
-<li>Select the Python interpreter you want to use (e.g., Python 3.12.0).</li>
-</ol>
-<p>You should now see a new folder called <code>.venv</code>. This is the virtual environment. Inside it is a folder called <code>lib</code>, which contains packages.</p>
-<p>Next, tell VS Code to use this virtual environment:</p>
-<ol type="1">
-<li>Open the <strong>Command Palette</strong> again.</li>
-<li>Type <code>Python: Select Interpreter</code> and choose it.</li>
-<li>Select the interpreter associated with your virtual environment (it should be listed under <code>.venv</code>).</li>
-</ol>
-<p>Now we’ve created and selected our virtual environment. We can install packages without affecting other projects.</p>
 </section>
-<section id="installing-packages" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="installing-packages"><span class="header-section-number">5</span> Installing Packages</h2>
-<p>Let’s install the <code>cowsay</code> package.</p>
-<ol type="1">
-<li>Open a <strong>new terminal</strong> in VS Code. You can do this with the terminal file menu option then selecting ‘new terminal’.</li>
-<li>Ensure the terminal is using your virtual environment. You can do this by hovering over the terminal icon in terminal window. It should mention that there is an activated environment for ….venv among other things</li>
-<li>Run the following command:</li>
-</ol>
-<pre class="{bash}"><code>#| eval: false
-pip install cowsay</code></pre>
-<p>Occasionally, you might encounter an issue where pip is not recognized in the terminal. This is likely due to a temporary glitch in VS Code’s environment detection. If this happens, try the following steps:</p>
-<ol type="1">
-<li>Close and reopen VS Code.</li>
-<li>Use the Command Palette to select the Python interpreter again.</li>
-<li>Open a new terminal.</li>
-</ol>
-<p>These steps should resolve the issue and restore access to pip. If the problem persists, it may indicate a more complex configuration problem that requires further investigation.</p>
-<p>Now we should be able to use the <code>cowsay</code> package. Open <code>test_cowsay.py</code> and click the run button to execute the script.</p>
-<p>You should see a cow saying hello!</p>
-</section>
-<section id="summary-of-key-steps" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="summary-of-key-steps"><span class="header-section-number">6</span> Summary of Key Steps</h2>
-<p>Congrats! You have now created a virtual environment and installed a package.</p>
-<p>These are key steps for any new Python project:</p>
-<ol type="1">
-<li><strong>F</strong>older: Create a project folder.</li>
-<li><strong>E</strong>nvironment: Set up a virtual environment.</li>
-<li><strong>I</strong>nterpreter: Select the appropriate Python interpreter.</li>
-<li><strong>L</strong>ibraries: Install the necessary packages.</li>
-</ol>
-<p>Remember the acronym <strong>FEIL</strong> to help you recall these steps. (If you don’t complete these steps you increase your chances of “FEIL”ure 😅)</p>
-<p>It’s a bit of a pain to have to set up a virtual environment every time you start a new project, but it’s a good habit to get into.</p>
-</section>
-<section id="demonstrating-environment-isolation" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="demonstrating-environment-isolation"><span class="header-section-number">7</span> Demonstrating Environment Isolation</h2>
-<p>Let’s demonstrate that the virtual environment is isolated.</p>
-<ol type="1">
-<li><p>Open your previous workspace <code>my_first_workspace</code> with the File &gt; Open Folder menu option.</p></li>
-<li><p>Create a Python file and try to use the <code>cowsay</code> package:</p>
-<p>::: {#533e61d4 .cell execution_count=2} <code>{.python .cell-code}  import cowsay</code> :::</p></li>
-</ol>
-<p>This will probably not work because <code>cowsay</code> is not installed in that environment. If it does work, it means you have <code>cowsay</code> installed globally, which is okay.</p>
-<p>Now, let’s return to our main folder/workspace. This is where you’ll conduct most of your analysis for this course.</p>
-</section>
-<section id="installing-course-packages" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="installing-course-packages"><span class="header-section-number">8</span> Installing Course Packages</h2>
-<p>As a final step, let’s install the packages we’ll need for the course. While we could install each package as we encounter it, it’s more efficient to install them all at once. In the terminal, run the following command. Type these very carefully.</p>
-<pre class="{bash}"><code>#| eval: false
-pip install plotly pandas jupyter ipykernel kaleido itables</code></pre>
+<section id="grading-rubric-100-points" class="level2">
+<h2 class="anchored" data-anchor-id="grading-rubric-100-points">Grading Rubric (100 points)</h2>
+<section id="data-selection-and-manipulation-25-points" class="level3">
+<h3 class="anchored" data-anchor-id="data-selection-and-manipulation-25-points">Data Selection and Manipulation (25 points)</h3>
 <ul>
-<li><strong>pandas</strong>: Data manipulation library.</li>
-<li><strong>plotly</strong>: Visualization library.</li>
-<li><strong>jupyter</strong> and <strong>ipykernel</strong>: Allow us to use Quarto to display our plots.</li>
-<li><strong>kaleido</strong>: Library for saving plots in different formats.</li>
-<li><strong>itables</strong>: Library for displaying tables in Quarto.</li>
+<li>Relevant data selected from Gapminder or approved alternative source</li>
+<li>Data files are properly cleaned without errors or inconsistencies</li>
+<li>Datasets are correctly merged when needed</li>
+<li>Shows evidence of mastery of a range of pandas methods/functions</li>
 </ul>
-<p>When its done installing, your cursor in the terminal should be active again. e.g.&nbsp;you should be able to press enter to start a new command.</p>
-<p>Keep this list of packages handy for future reference, as you’ll likely need them for most projects.</p>
-<p>This command will install all the required packages in one go. If your installation stops at some point, try rerunning the command. Sometimes network issues may cause the installation to fail. If it freezes for more than 10 minutes, close the terminal and rerun the command.</p>
 </section>
-<section id="conclusion" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">9</span> Conclusion</h2>
-<p>You’ve now learned how to create a workspace, set up a virtual environment, install packages, and use them in your Python projects. Remember that each project should have its own virtual environment to keep dependencies isolated and manageable.</p>
+<section id="dashboard-structure-15-points" class="level3">
+<h3 class="anchored" data-anchor-id="dashboard-structure-15-points">Dashboard Structure (15 points)</h3>
+<ul>
+<li>Contains required three pages (first indicator, second indicator, relationship)</li>
+<li>Layout is logical, easy to navigate, and makes effective use of space</li>
+<li>Design choices enhance understanding of the content</li>
+</ul>
+</section>
+<section id="visualization-elements-30-points" class="level3">
+<h3 class="anchored" data-anchor-id="visualization-elements-30-points">Visualization Elements (30 points)</h3>
+<ul>
+<li>Dashboard includes at least 12 display elements (an element is a value box, plot, table, map, etc.)</li>
+<li>Plots have clear titles, labels, and appropriate scales</li>
+<li>Interactive features (e.g.&nbsp;hover-over text) function correctly and display clear and useful information</li>
+<li>Visual elements have titles or text boxes that explain the key insights</li>
+<li>Appropriate choice of visualization types for the data</li>
+</ul>
+</section>
+<section id="code-quality-10-points" class="level3">
+<h3 class="anchored" data-anchor-id="code-quality-10-points">Code Quality (10 points)</h3>
+<ul>
+<li>Code is well-organized and readable</li>
+<li>Code runs without errors</li>
+<li>Efficient use of functions and operations</li>
+<li>Consistent formatting and style</li>
+</ul>
+</section>
+<section id="deployment-and-structure-10-points" class="level3">
+<h3 class="anchored" data-anchor-id="deployment-and-structure-10-points">Deployment and Structure (10 points)</h3>
+<ul>
+<li>Dashboard is successfully deployed to GitHub Pages</li>
+<li>Files are logically organized in repository</li>
+<li>Repository contains only necessary files</li>
+</ul>
+</section>
+<section id="originality-creativity-and-insight-10-points" class="level3">
+<h3 class="anchored" data-anchor-id="originality-creativity-and-insight-10-points">Originality, Creativity, and Insight (10 points)</h3>
+<ul>
+<li>Original approaches to dashboard design, visualization, or interaction</li>
+<li>Demonstrates thoughtful exploration of the data</li>
+<li>Presents interesting patterns or relationships</li>
+</ul>
+</section>
 </section>
 
 </main>

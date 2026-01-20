@@ -30,13 +30,13 @@ By the end of this lesson, you should be able to:
 
 ## Creating a New Workspace
 
-On your desktop or in your `Documents` folder, create a new folder and name it `graph_courses_python`. This is going to be the main folder for many of the projects for this course so make sure you put it in an easy to reach place.   
+On your desktop or in your `Documents` folder, create a new folder and name it `si_analytics_python`. This is going to be the main folder for many of the projects for this course so make sure you put it in an easy to reach place.   
 
 Open VS Code.
 
 Go to **File > Open Folder**.
 
-Navigate to the `graph_courses_python` folder you just created and select it.
+Navigate to the `si_analytics_python` folder you just created and select it.
 
 Now create a new script and call it `test_cowsay.py`. 
 

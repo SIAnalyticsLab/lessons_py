@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="project-setup" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="project-setup"><span class="header-section-number">4</span> Project Setup</h2>
-<p>To begin, open your <code>graph_courses_python</code> project in VSCode.</p>
+<p>To begin, open your <code>si_analytics_python</code> project in VSCode.</p>
 <p>If you did not watch the previous video explaining project setup, please do so now. In that video, we explain how to create a project folder, create a virtual environment, select an interpreter, and install the <code>jupyter</code>, <code>ipykernel</code>, <code>kaleido</code>, <code>itables</code>, <code>plotly</code>, and <code>pandas</code> packages.</p>
 </section>
 <section id="create-a-new-document" class="level2" data-number="5">
@@ -180,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="6" class="anchored" data-anchor-id="adding-code-chunks"><span class="header-section-number">6</span> Adding Code Chunks</h2>
 <p>You can add code chunks to your document by using the following syntax with the shortcut <code>Cmd + Shift + I</code> (on Mac) or <code>Ctrl + Shift + I</code> (on Windows). Alternatively, you can click on the “…” button at the top right of the screen.</p>
 <p>Let’s create a code chunk that adds two numbers together and displays the result:</p>
-<div id="a5e73928" class="cell" data-execution_count="1">
+<div id="7965525c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You should see a “Run Cell” button in the toolbar. Click this to run the code chunk.</p>
@@ -280,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="10" class="anchored" data-anchor-id="code-chunk-options"><span class="header-section-number">10</span> Code Chunk Options</h2>
 <p>It is possible to pass options to each code chunk to modify its behavior.</p>
 <p>For example, a code chunk looks like this:</p>
-<div id="46ffa7ef" class="cell" data-execution_count="2">
+<div id="4c366783" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -304,11 +304,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="11" class="anchored" data-anchor-id="displaying-tables"><span class="header-section-number">11</span> Displaying Tables</h2>
 <p>By default, pandas DataFrames display neatly in Quarto. However, for interactive tables, we can use the <code>itables</code> package.</p>
 <p>Ensure that you have the <code>itables</code> package installed. If not, you can install it using the following command:</p>
-<div id="5da4b1dc" class="cell" data-execution_count="4">
+<div id="383990bf" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install itables</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then, you can run code similar to the following:</p>
-<div id="579cc7e7" class="cell" data-execution_count="5">
+<div id="23f58e90" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itables <span class="im">import</span> show</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -320,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="displaying-plots" class="level2" data-number="12">
 <h2 data-number="12" class="anchored" data-anchor-id="displaying-plots"><span class="header-section-number">12</span> Displaying Plots</h2>
 <p>For interactive plots, the <code>plotly</code> package is very useful.</p>
-<div id="b068f592" class="cell" data-execution_count="6">
+<div id="1efa556c" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tips <span class="op">=</span> px.data.tips()</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tips_sex <span class="op">=</span> px.violin(tips, x<span class="op">=</span><span class="st">"day"</span>, y<span class="op">=</span><span class="st">"total_bill"</span>, color<span class="op">=</span><span class="st">"sex"</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>tips_sex.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -328,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This will display an interactive Plotly plot in the HTML output.</p>
 <p>For static outputs like PDFs and Word documents, we need to save the plot as an image file and then include it in the document.</p>
 <p>First, save the plot as an image:</p>
-<div id="c8d88705" class="cell" data-execution_count="7">
+<div id="d7732384" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tips_sex.write_image(<span class="st">"tips_sex_plot.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This command will create a static image file in the same folder as your document. We can then include it in the document as follows:</p>

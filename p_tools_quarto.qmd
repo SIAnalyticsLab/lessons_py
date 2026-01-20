@@ -57,7 +57,7 @@ That's a lot of installations, but fear not—you only have to do these steps on
 
 ## Project Setup
 
-To begin, open your `graph_courses_python` project in VSCode.
+To begin, open your `si_analytics_python` project in VSCode.
 
 If you did not watch the previous video explaining project setup, please do so now. In that video, we explain how to create a project folder, create a virtual environment, select an interpreter, and install the `jupyter`, `ipykernel`, `kaleido`, `itables`, `plotly`, and `pandas` packages.
 
