@@ -19,6 +19,7 @@ execute:
 # | echo: false
 # Setup
 import pandas as pd
+from yaml import safe_load as parse_string
 
 pd.options.display.max_rows = 5
 ```
@@ -59,7 +60,7 @@ In this lesson, we analyse results from a COVID-19 survey conducted in Yaounde, 
 
 You can find out more about this dataset here: [https://www.nature.com/articles/s41467-021-25946-0](https://www.nature.com/articles/s41467-021-25946-0)
 
-To download the dataset, visit this link: [https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/yaounde_data.zip](https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/yaounde_data.zip)
+To download the dataset, visit this link: [https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/yaounde_data.zip](yam)
 
 Then unzip the file and place the `yaounde_data.csv` file in the `data` folder in the same directory as your notebook.
 
