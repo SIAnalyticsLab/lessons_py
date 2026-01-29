@@ -45,7 +45,7 @@ Let's get started!
 
 In this lesson, we will again use the data from the COVID-19 serological survey conducted in Yaounde, Cameroon.
 
-You can download the dataset from this link: [yaounde_data.csv](https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/yaounde_data.csv)
+You can download the dataset from this link: [yaounde_data.csv](https://github.com/SIAnalyticsLab/lessons_py/blob/main/data/yaounde_data.csv)
 
 You can find out more about this dataset here: https://www.nature.com/articles/s41467-021-25946-0
 
