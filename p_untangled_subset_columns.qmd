@@ -58,8 +58,6 @@ import pandas as pd
 
 In this lesson, we analyse results from a COVID-19 survey conducted in Yaounde, Cameroon in late 2020. The survey estimated how many people had been infected with COVID-19 in the region, by testing for antibodies.
 
-You can find out more about this dataset here: [https://www.nature.com/articles/s41467-021-25946-0](https://www.nature.com/articles/s41467-021-25946-0)
-
 To download the dataset, visit this link: [https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/yaounde_data.zip](yam)
 
 Then unzip the file and place the `yaounde_data.csv` file in the `data` folder in the same directory as your notebook.
