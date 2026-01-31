@@ -128,18 +128,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data-packages" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="data-packages"><span class="header-section-number">1</span> Data &amp; Packages</h2>
 <p>Please run the code below to load the packages and datasets we’ll be using throughout this lesson.</p>
-<div id="5c754225" class="cell" data-execution_count="2">
+<div id="d417c6c7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># TB incidence in Africa</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tb_2019_africa <span class="op">=</span> pd.read_csv(</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/tb_incidence_2019.csv"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>) </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/tb_incidence_2019.csv"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Health expenditure data</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>health_exp_2019 <span class="op">=</span> pd.read_csv(</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/health_expend_per_cap_2019.csv"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/health_expend_per_cap_2019.csv"</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Highest expenditure countries</span></span>
@@ -147,12 +147,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># TB cases in children</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>tb_cases_children <span class="op">=</span> pd.read_csv(</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/tb_cases_children_2012.csv"</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/tb_cases_children_2012.csv"</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>).dropna()</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Country continents data</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>country_continents <span class="op">=</span> pd.read_csv(</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/country_continents.csv"</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/country_continents.csv"</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># people data</span></span>
@@ -349,34 +349,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="why-do-we-need-joins" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="why-do-we-need-joins"><span class="header-section-number">4</span> Why Do We Need Joins?</h2>
 <p>To illustrate the utility of joins, let’s start with a toy example. Consider the following two datasets. The first, <code>people</code>, contains names and ages of three individuals:</p>
-<div id="3921b6d9" class="cell" data-execution_count="3">
+<div id="c3b14166" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The second, <code>test_info</code>, contains test dates and results for those individuals:</p>
-<div id="c334f1b2" class="cell" data-execution_count="4">
+<div id="19b2f66a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>test_info</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We’d like to analyze these data together, and so we need a way to combine them.</p>
 <p>One option we might consider is concatenating the dataframes horizontally using <code>pd.concat()</code>:</p>
-<div id="afc23eae" class="cell" data-execution_count="5">
+<div id="09c60874" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pd.concat([people, test_info], axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This successfully merges the datasets, but it doesn’t do so very intelligently. The function essentially “pastes” or “staples” the two tables together. So, as you can notice, the “name” column appears twice. This is not ideal and will be problematic for analysis.</p>
 <p>Another problem occurs if the rows in the two datasets are not already aligned. In this case, the data will be combined incorrectly with <code>pd.concat()</code>. Consider the <code>test_info_disordered</code> dataset, which now has Bob in the first row:</p>
-<div id="23e68d05" class="cell" data-execution_count="6">
+<div id="b1b63f50" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>test_info_disordered</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>What happens if we concatenate this with the original <code>people</code> dataset, where Bob was in the <em>second</em> row?</p>
-<div id="7c35ae59" class="cell" data-execution_count="7">
+<div id="3bb4285c" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pd.concat([people, test_info_disordered], axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Alice’s people details are now mistakenly aligned with Bob’s test info!</p>
 <p>A third issue arises when an entity appears more than once in one dataset. Perhaps Alice had multiple tests:</p>
-<div id="19dd3833" class="cell" data-execution_count="8">
+<div id="d7e3990c" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>test_info_multiple</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If we try to concatenate this with the <code>people</code> dataset, we’ll get mismatched data due to differing row counts:</p>
-<div id="6f2d97f8" class="cell" data-execution_count="9">
+<div id="4d6f385e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pd.concat([people, test_info_multiple], axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This results in NaN values and misaligned data.</p>
@@ -396,16 +396,16 @@ Side Note
 <hr>
 <p>Clearly, we need a smarter way to combine datasets than concatenation; we’ll need to venture into the world of joining. In pandas, the function that performs joins is <code>pd.merge()</code>.</p>
 <p>It works for the simple case, and it does not duplicate the name column:</p>
-<div id="adaec74e" class="cell" data-execution_count="10">
+<div id="f076a2ae" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>It works where the datasets are not ordered identically:</p>
-<div id="bd833604" class="cell" data-execution_count="11">
+<div id="4901e78b" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_disordered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As you can see, Alice’s details are now correctly aligned with her test results.</p>
 <p>And it works when there are multiple test rows per individual:</p>
-<div id="bec6ed0e" class="cell" data-execution_count="12">
+<div id="000213f3" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_multiple)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In this case, the <code>pd.merge()</code> function correctly repeats Alice’s details for each of her tests.</p>
@@ -415,13 +415,13 @@ Side Note
 <h2 data-number="5" class="anchored" data-anchor-id="pd.merge-syntax"><span class="header-section-number">5</span> pd.merge() syntax</h2>
 <p>Now that we understand <em>why</em> we need joins, let’s look at their basic syntax.</p>
 <p>Joins take two dataframes as the first two arguments: <code>left</code> (the <em>left</em> dataframe) and <code>right</code> (the <em>right</em> dataframe). In pandas, you can provide these as positional or keyword arguments:</p>
-<div id="394932fa" class="cell" data-execution_count="13">
+<div id="7c589b00" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># left and right</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>pd.merge(left<span class="op">=</span>people, right<span class="op">=</span>test_info)  <span class="co"># keyword arguments</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info)  <span class="co"># positional arguments</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Another critical argument is <code>on</code>, which indicates the column or <strong>key</strong> used to connect the tables. We don’t always need to supply this argument; it can be <em>inferred</em> from the datasets. For example, in our original examples, “name” is the only column common to <code>people</code> and <code>test_info</code>. So the merge function assumes <code>on='name'</code>:</p>
-<div id="0668efcb" class="cell" data-execution_count="14">
+<div id="0d726263" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># on argument is optional if the column key is the same in both dataframes</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info, on<span class="op">=</span><span class="st">"name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -440,18 +440,18 @@ Vocab
 </div>
 </div>
 <p>What happens if the keys are named differently in the two datasets? Consider the <code>test_info_different_name</code> dataset, where the “name” column has been changed to “first_name”:</p>
-<div id="4c2dd1a0" class="cell" data-execution_count="15">
+<div id="4a1df452" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>test_info_different_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If we try to join <code>test_info_different_name</code> with our original <code>people</code> dataset, we will encounter an error:</p>
-<div id="b1c9bb53" class="cell" data-execution_count="16">
+<div id="2320b7da" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_different_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>MergeError: No common columns to perform merge on. Merge options: left_on=None, right_on=None, left_index=False, right_index=False</code></pre>
 <p>The error indicates that there are no common variables, so the join is not possible.</p>
 <p>In situations like this, you have two choices: you can rename the column in the second dataframe to match the first, or more simply, specify which columns to join on using <code>left_on</code> and <code>right_on</code>.</p>
 <p>Here’s how to do this:</p>
-<div id="21562e20" class="cell" data-execution_count="17">
+<div id="033e5ad3" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_different_name, left_on<span class="op">=</span><span class="st">'name'</span>, right_on<span class="op">=</span><span class="st">'first_name'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This syntax essentially says, “Connect <code>name</code> from the left dataframe with <code>first_name</code> from the right dataframe because they represent the same data.”</p>
@@ -482,15 +482,15 @@ Practice
 <section id="practice-q-join-employees-and-training-sessions" class="level2 callout-body-container callout-body" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="practice-q-join-employees-and-training-sessions"><span class="header-section-number">6</span> Practice Q: Join Employees and Training Sessions</h2>
 <p>Consider the two datasets below, one with employee details and the other with training session dates for these employees.</p>
-<div id="97dbb51d" class="cell" data-execution_count="18">
+<div id="f71b9692" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>employees</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8f3644b9" class="cell" data-execution_count="19">
+<div id="6ec55d1d" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>training_sessions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>How many rows and columns would you expect to have after joining these two datasets?</p>
 <p>Now join the two datasets and check your answer.</p>
-<div id="790c83b0" class="cell" data-execution_count="20">
+<div id="7413accc" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -507,10 +507,10 @@ Practice
 <section id="practice-q-join-with-on-argument" class="level2 callout-body-container callout-body" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="practice-q-join-with-on-argument"><span class="header-section-number">7</span> Practice Q: Join with <code>on</code> Argument</h2>
 <p>Two datasets are shown below, one with customer details and the other with order records for those customers.</p>
-<div id="022190a5" class="cell" data-execution_count="22">
+<div id="172e49fc" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>customer_details</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="253c4967" class="cell" data-execution_count="23">
+<div id="5bb1b980" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>order_records</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Join the <code>customer_details</code> and <code>order_records</code> datasets. You will need to use the <code>left_on</code> and <code>right_on</code> arguments because the customer identifier columns have different names.</p>
@@ -527,15 +527,15 @@ Practice
 <h2 data-number="9" class="anchored" data-anchor-id="left-join"><span class="header-section-number">9</span> <code>left</code> join</h2>
 <p>Let’s start with the <code>left</code> join. To see how it handles unmatched rows, we will try to join our original <code>people</code> dataset with a modified version of the <code>test_info</code> dataset.</p>
 <p>As a reminder, here is the <code>people</code> dataset, with Alice, Bob, and Charlie:</p>
-<div id="c93182c4" class="cell" data-execution_count="25">
+<div id="db12a401" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For test information, we’ll remove <code>Charlie</code> and we’ll add a new individual, <code>Xavier</code>, and his test data:</p>
-<div id="177621b0" class="cell" data-execution_count="26">
+<div id="0a92213e" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>test_info_xavier</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can specify the join type using the <code>how</code> argument:</p>
-<div id="57bd18cf" class="cell" data-execution_count="27">
+<div id="79f422d4" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_xavier, how<span class="op">=</span><span class="st">'left'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As you can see, with the <em>left</em> join, all records from the <em>left</em> dataframe (<code>people</code>) are retained. So, even though <code>Charlie</code> doesn’t have a match in the <code>test_info_xavier</code> dataset, he’s still included in the output. (But of course, since his test information is not available in <code>test_info_xavier</code>, those values were left as <code>NaN</code>.)</p>
@@ -548,7 +548,7 @@ Practice
 </figure>
 </div>
 <p>Now what if we flip the dataframes? Let’s see the outcome when <code>test_info_xavier</code> is the left dataframe and <code>people</code> is the right one:</p>
-<div id="12eb7ead" class="cell" data-execution_count="28">
+<div id="49d2894a" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>pd.merge(test_info_xavier, people, on<span class="op">=</span><span class="st">'name'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Once again, the <code>left</code> join retains all rows from the <em>left</em> dataframe (now <code>test_info_xavier</code>). This means Xavier’s data is included this time. Charlie, on the other hand, is excluded.</p>
@@ -577,10 +577,10 @@ Practice
 <section id="practice-q-left-join-students-and-exam-dates" class="level2 callout-body-container callout-body" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="practice-q-left-join-students-and-exam-dates"><span class="header-section-number">10</span> Practice Q: Left Join Students and Exam Dates</h2>
 <p>Consider the two datasets below, one with student details and the other with exam dates for some of these students.</p>
-<div id="eafba7da" class="cell" data-execution_count="29">
+<div id="e523d9d0" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8ba27dd5" class="cell" data-execution_count="30">
+<div id="554593d7" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>exam_dates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Join the <code>students</code> dataset with the <code>exam_dates</code> dataset using a left join.</p>
@@ -592,24 +592,24 @@ Practice
 <h2 data-number="11" class="anchored" data-anchor-id="analysing-african-tb-incidence-and-health-expenditure"><span class="header-section-number">11</span> Analysing African TB Incidence and Health Expenditure</h2>
 <p>Let’s try another example, this time with a more realistic set of data.</p>
 <p>First, we have data on the TB incidence rate per 100,000 people for some African countries, from the <a href="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/incidence-of-tuberculosis-(per-100-000-population-per-year)">WHO</a>:</p>
-<div id="af889b31" class="cell" data-execution_count="32">
+<div id="ffcb29bd" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tb_2019_africa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We want to analyze how TB incidence in African countries varies with government health expenditure per capita. For this, we have data on health expenditure per capita in USD, also from the WHO, for countries from all continents:</p>
-<div id="1d1e5688" class="cell" data-execution_count="33">
+<div id="fa7c58d9" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>health_exp_2019</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Which dataset should we use as the left dataframe for the join?</p>
 <p>Since our goal is to analyze African countries, we should use <code>tb_2019_africa</code> as the left dataframe. This will ensure we keep all the African countries in the final joined dataset.</p>
 <p>Let’s join them:</p>
-<div id="87023e4e" class="cell" data-execution_count="34">
+<div id="f28cc6aa" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>tb_health_exp_joined <span class="op">=</span> pd.merge(tb_2019_africa, health_exp_2019, on<span class="op">=</span><span class="st">'country'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>tb_health_exp_joined</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now in the joined dataset, we have just the African countries, which is exactly what we wanted.</p>
 <p>All rows from the left dataframe <code>tb_2019_africa</code> were kept, while non-African countries from <code>health_exp_2019</code> were discarded.</p>
 <p>We can check if any rows in <code>tb_2019_africa</code> did not have a match in <code>health_exp_2019</code> by filtering for <code>NaN</code> values:</p>
-<div id="0392ced1" class="cell" data-execution_count="35">
+<div id="de1bb0a7" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>tb_health_exp_joined.query(<span class="st">"expend_usd.isna()"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This shows that 3 countries—Mauritius, South Sudan, and Comoros—did not have expenditure data in <code>health_exp_2019</code>. But because they were present in <code>tb_2019_africa</code>, and that was the left dataframe, they were still included in the joined data.</p>
@@ -625,11 +625,11 @@ Practice
 <section id="practice-q-left-join-tb-cases-and-continents" class="level2 callout-body-container callout-body" data-number="12">
 <h2 data-number="12" class="anchored" data-anchor-id="practice-q-left-join-tb-cases-and-continents"><span class="header-section-number">12</span> Practice Q: Left Join TB Cases and Continents</h2>
 <p>The first, <code>tb_cases_children</code>, contains the number of TB cases in under 15s in 2012, by country:</p>
-<div id="8515be8f" class="cell" data-execution_count="36">
+<div id="7750abe4" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>tb_cases_children</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And <code>country_continents</code>, lists all countries and their corresponding region and continent:</p>
-<div id="e734a691" class="cell" data-execution_count="37">
+<div id="ea0a0615" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>country_continents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Your goal is to add the continent and region data to the TB cases dataset.</p>
@@ -641,12 +641,12 @@ Practice
 <h2 data-number="13" class="anchored" data-anchor-id="right-join"><span class="header-section-number">13</span> <code>right</code> join</h2>
 <p>A <code>right</code> join can be thought of as a mirror image of a <code>left</code> join. The mechanics are the same, but now all rows from the <em>right</em> dataframe are retained, while only those rows from the left dataframe that find a match in the right are kept.</p>
 <p>Let’s look at an example to understand this. We’ll use our original <code>people</code> and modified <code>test_info_xavier</code> datasets:</p>
-<div id="516df25a" class="cell" data-execution_count="39">
+<div id="257e9454" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>people</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>test_info_xavier</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now let’s try a right join, with <code>people</code> as the right dataframe:</p>
-<div id="cfa3baf9" class="cell" data-execution_count="40">
+<div id="c642655f" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>pd.merge(test_info_xavier, people, on<span class="op">=</span><span class="st">'name'</span>, how<span class="op">=</span><span class="st">'right'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hopefully you’re getting the hang of this and could predict that output! Since <code>people</code> was the <em>right</em> dataframe, and we are using a <em>right</em> join, all the rows from <code>people</code> are kept—Alice, Bob, and Charlie—but only matching records from <code>test_info_xavier</code>.</p>
@@ -658,11 +658,11 @@ Practice
 </figure>
 </div>
 <p>An important point—the same final dataframe can be created with either a <code>left</code> join or a <code>right</code> join; it just depends on what order you provide the dataframes to these functions:</p>
-<div id="e608b699" class="cell" data-execution_count="41">
+<div id="ca5404e5" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Here, right join prioritizes the right dataframe, people</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>pd.merge(test_info_xavier, people, on<span class="op">=</span><span class="st">'name'</span>, how<span class="op">=</span><span class="st">'right'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="dc56dfb4" class="cell" data-execution_count="42">
+<div id="1ddbeeb6" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Here, left join prioritizes the left dataframe, again people</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_xavier, on<span class="op">=</span><span class="st">'name'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -671,14 +671,14 @@ Practice
 <section id="inner-join" class="level2" data-number="14">
 <h2 data-number="14" class="anchored" data-anchor-id="inner-join"><span class="header-section-number">14</span> <code>inner</code> join</h2>
 <p>What makes an <code>inner</code> join distinct is that rows are only kept if the joining values are present in <em>both</em> dataframes. Let’s return to our example of individuals and their test results. As a reminder, here are our datasets:</p>
-<div id="617c531e" class="cell" data-execution_count="43">
+<div id="ab67cbd5" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6c09f7c3" class="cell" data-execution_count="44">
+<div id="29c92644" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>test_info_xavier</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now that we have a better understanding of how joins work, we can already picture what the final dataframe would look like if we used an <code>inner</code> join on our two dataframes above. If only rows with joining values that are in <em>both</em> dataframes are kept, and the only individuals that are in both <code>people</code> and <code>test_info_xavier</code> are <code>Alice</code> and <code>Bob</code>, then they should be the only individuals in our final dataset! Let’s try it out.</p>
-<div id="41481eba" class="cell" data-execution_count="45">
+<div id="5c1db4ee" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_xavier, on<span class="op">=</span><span class="st">'name'</span>, how<span class="op">=</span><span class="st">'inner'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Perfect, that’s exactly what we expected! Here, <code>Charlie</code> was only in the <code>people</code> dataset, and <code>Xavier</code> was only in the <code>test_info_xavier</code> dataset, so both of them were removed. The graphic below shows how this join works:</p>
@@ -689,7 +689,7 @@ Practice
 </figure>
 </div>
 <p>Note that the default join type is <code>inner</code>. So if you don’t specify <code>how='inner'</code>, you’re actually performing an inner join! Try it out:</p>
-<div id="d9f29c58" class="cell" data-execution_count="46">
+<div id="1a441bb6" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_xavier)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Practice">
@@ -704,10 +704,10 @@ Practice
 <section id="practice-q-inner-join-products" class="level2 callout-body-container callout-body" data-number="15">
 <h2 data-number="15" class="anchored" data-anchor-id="practice-q-inner-join-products"><span class="header-section-number">15</span> Practice Q: Inner Join Products</h2>
 <p>The following data is on product sales and customer feedback in 2019.</p>
-<div id="6d5ee90c" class="cell" data-execution_count="47">
+<div id="0b1a97bb" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>total_sales</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="502e2551" class="cell" data-execution_count="48">
+<div id="3fa0cec4" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>product_feedback</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Use an <code>inner</code> join to combine the datasets.</p>
@@ -720,12 +720,12 @@ Practice
 <h2 data-number="16" class="anchored" data-anchor-id="outer-join"><span class="header-section-number">16</span> <code>outer</code> join</h2>
 <p>The peculiarity of the <code>outer</code> join is that it retains <em>all</em> records, regardless of whether or not there is a match between the two datasets. Where there is missing information in our final dataset, cells are set to <code>NaN</code> just as we have seen in the <code>left</code> and <code>right</code> joins. Let’s take a look at our <code>people</code> and <code>test_info_xavier</code> datasets to illustrate this.</p>
 <p>Here is a reminder of our datasets:</p>
-<div id="c754d3e3" class="cell" data-execution_count="50">
+<div id="cac840fa" class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>people</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>test_info_xavier</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now let’s perform an <code>outer</code> join:</p>
-<div id="e5f2097d" class="cell" data-execution_count="51">
+<div id="7ff24742" class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>pd.merge(people, test_info_xavier, on<span class="op">=</span><span class="st">'name'</span>, how<span class="op">=</span><span class="st">'outer'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As we can see, all rows were kept so there was no loss in information! The graphic below illustrates this process:</p>
@@ -748,10 +748,10 @@ Practice
 <section id="practice-q-join-sales-data" class="level2 callout-body-container callout-body" data-number="17">
 <h2 data-number="17" class="anchored" data-anchor-id="practice-q-join-sales-data"><span class="header-section-number">17</span> Practice Q: Join Sales Data</h2>
 <p>The following dataframes contain global sales and global customer complaints from various years.</p>
-<div id="3f0fc692" class="cell" data-execution_count="52">
+<div id="7ce84b6b" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>sales</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0503f7df" class="cell" data-execution_count="53">
+<div id="7acdfeb5" class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>customer_complaints</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Join the above tables using the appropriate join to retain all information from the two datasets.</p>

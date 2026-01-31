@@ -35,12 +35,12 @@ import pandas as pd
 
 # TB incidence in Africa
 tb_2019_africa = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/tb_incidence_2019.csv"
-) 
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/tb_incidence_2019.csv"
+)
 
 # Health expenditure data
 health_exp_2019 = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/health_expend_per_cap_2019.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/health_expend_per_cap_2019.csv"
 )
 
 # Highest expenditure countries
@@ -48,12 +48,12 @@ highest_exp = health_exp_2019.sort_values("expend_usd", ascending=False).head(70
 
 # TB cases in children
 tb_cases_children = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/tb_cases_children_2012.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/tb_cases_children_2012.csv"
 ).dropna()
 
 # Country continents data
 country_continents = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/country_continents.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/country_continents.csv"
 )
 
 # people data
