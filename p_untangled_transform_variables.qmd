@@ -49,7 +49,7 @@ pd.options.mode.copy_on_write = True
 
 ## Dataset
 
-In this lesson, we'll use a dataset of United States counties with demographic and economic data. You can download the dataset from this link:[https://github.com/the-graph-courses/idap_book/raw/refs/heads/main/data/us_counties_data.zip](https://github.com/the-graph-courses/idap_book/raw/refs/heads/main/data/us_counties_data.zip).
+In this lesson, we'll use a dataset of United States counties with demographic and economic data. You can download the dataset from this link:[https://github.com/SIAnalyticsLab/lessons_py/raw/refs/heads/main/data/us_counties_data.zip](https://github.com/SIAnalyticsLab/lessons_py/raw/refs/heads/main/data/us_counties_data.zip).
 
 Once you've downloaded the file, unzip it and place the `us_counties_data.csv` file in the `data` folder for your project.
 
