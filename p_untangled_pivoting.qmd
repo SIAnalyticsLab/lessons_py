@@ -39,7 +39,7 @@ temperatures = pd.DataFrame(
 
 # Fuels Wide dataset
 fuels_wide = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/oil_per_capita_wide.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/oil_per_capita_wide.csv"
 )
 
 # Eurostat Births Wide dataset
@@ -49,12 +49,12 @@ euro_births_wide = pd.read_csv(
 
 # Contracts dataset
 contracts = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/chicago_contracts_20_23.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/euro_births_wide.csv"
 )
 
 # Population dataset
 population = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/tidyr_population.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/tidyr_population.csv"
 )
 ```
 
