@@ -31,13 +31,13 @@ Run the code below to load and define the datasets to be used in this lesson.
 
 # Load datasets
 oil_consumption = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/oil_consumption.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/oil_consumption.csv"
 )
 tidyr_population = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/tidyr_population.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/tidyr_population.csv"
 )
 country_regions = pd.read_csv(
-    "https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/country_continent_data.csv"
+    "https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/country_continent_data.csv"
 )
 
 
