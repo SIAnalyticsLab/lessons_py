@@ -131,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="packages" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="packages"><span class="header-section-number">1</span> Packages</h2>
-<div id="8ce7caf2" class="cell" data-execution_count="1">
+<div id="87c154bd" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -139,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="data"><span class="header-section-number">2</span> Data</h2>
 <p>Run the code below to load and define the datasets to be used in this lesson.</p>
-<div id="a65826eb" class="cell" data-execution_count="2">
+<div id="67b50bf1" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures dataset</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>temperatures <span class="op">=</span> pd.DataFrame(</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    {</span>
@@ -157,12 +157,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Eurostat Births Wide dataset</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>euro_births_wide <span class="op">=</span> pd.read_csv(</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/the-graph-courses/idap_book/main/data/euro_births_wide.csv"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/euro_births_wide.csv"</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Contracts dataset</span></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>contracts <span class="op">=</span> pd.read_csv(</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/euro_births_wide.csv"</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/SIAnalyticsLab/lessons_py/main/data/chicago_contracts_20_23.csv"</span></span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Population dataset</span></span>
@@ -455,7 +455,7 @@ Practice
 <section id="practice-q-wide-or-long" class="level2 callout-body-container callout-body" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="practice-q-wide-or-long"><span class="header-section-number">6</span> Practice Q: Wide or Long?</h2>
 <p>Consider the <code>temperatures</code> dataset created earlier:</p>
-<div id="c9c93879" class="cell" data-execution_count="3">
+<div id="9cea1b11" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>temperatures</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Is this data in a wide or long format?</p>
@@ -471,23 +471,23 @@ Practice
 <h2 data-number="8" class="anchored" data-anchor-id="from-wide-to-long-with-melt"><span class="header-section-number">8</span> From Wide to Long with <code>melt()</code></h2>
 <p>To practice reshaping from a wide to a long format, we’ll consider data from Our World in Data on fossil fuel consumption per capita. You can find the data <a href="https://ourworldindata.org/grapher/fossil-fuels-per-capita">here</a>.</p>
 <p>Below, we view this data on fossil fuel consumption per capita:</p>
-<div id="2d9e0f51" class="cell" data-execution_count="4">
+<div id="6fd33386" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fuels_wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We observe that each observational unit (each country) occupies only one row, with the repeated measurements of fossil fuel consumption (in kilowatt-hour equivalents) spread out across multiple columns. Hence, this dataset is in a wide format.</p>
 <p>To convert it to a long format, we can use the convenient <code>melt</code> function. Within <code>melt</code>, can define the id variables, which we do not want to reshape:</p>
-<div id="f6ecb5d4" class="cell" data-execution_count="5">
+<div id="61e71883" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fuels_long <span class="op">=</span> fuels_wide.melt(id_vars<span class="op">=</span>[<span class="st">"Entity"</span>, <span class="st">"Code"</span>])</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fuels_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Very easy!</p>
 <p>Let’s sort it so it’s easier to read:</p>
-<div id="f32471e1" class="cell" data-execution_count="6">
+<div id="d1f61f28" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>fuels_long <span class="op">=</span> fuels_long.sort_values(by<span class="op">=</span>[<span class="st">'Entity'</span>, <span class="st">'variable'</span>])</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>fuels_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The years are now indicated in the variable <code>variable</code>, and all the consumption values occupy a single variable, <code>value</code>. We may wish to rename the <code>variable</code> column to <code>year</code>, and the <code>value</code> column to <code>oil_consumption</code>. This can be done directly in the <code>melt</code> function:</p>
-<div id="ab820d18" class="cell" data-execution_count="7">
+<div id="50877245" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fuels_long <span class="op">=</span> fuels_wide.melt(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">'Entity'</span>, <span class="st">'Code'</span>],</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    var_name<span class="op">=</span><span class="st">'year'</span>,</span>
@@ -496,7 +496,7 @@ Practice
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>fuels_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You may also want to remove the <code>y_</code> in front of each year. This can be achieved with a string operation.</p>
-<div id="c6f1ffd0" class="cell" data-execution_count="8">
+<div id="795ddd31" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fuels_long[<span class="st">'year'</span>] <span class="op">=</span> fuels_long[<span class="st">'year'</span>].<span class="bu">str</span>.replace(<span class="st">'y_'</span>, <span class="st">''</span>).astype(<span class="bu">int</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>fuels_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -518,7 +518,7 @@ Practice
 <section id="practice-q-temperatures-to-long" class="level2 callout-body-container callout-body" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="practice-q-temperatures-to-long"><span class="header-section-number">9</span> Practice Q: Temperatures to Long</h2>
 <p>Convert the <code>temperatures</code> dataset shown below into a long format. Your answer should have the following column names: <strong>“country”</strong>, <strong>“year”</strong>, and <strong>“avg_temp”</strong>.</p>
-<div id="a347d342" class="cell" data-execution_count="9">
+<div id="6de26a20" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>temperatures</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -536,7 +536,7 @@ Practice
 <section id="practice-q-eurostat-births-to-long" class="level2 callout-body-container callout-body" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="practice-q-eurostat-births-to-long"><span class="header-section-number">10</span> Practice Q: Eurostat Births to Long</h2>
 <p>For this practice question, you will use the <code>euro_births_wide</code> dataset from <a href="https://ec.europa.eu/eurostat/databrowser/view/tps00204/default/table">Eurostat</a>. It shows the annual number of births in 50 European countries:</p>
-<div id="fafd8133" class="cell" data-execution_count="10">
+<div id="ccfe916c" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>euro_births_wide.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The data is in a wide format. Convert it to a long format DataFrame that has the following column names: <strong>“country”</strong>, <strong>“year”</strong>, and <strong>“births_count”</strong>.</p>
@@ -548,18 +548,18 @@ Practice
 <h2 data-number="11" class="anchored" data-anchor-id="using-long-data-for-analysis"><span class="header-section-number">11</span> Using Long Data for Analysis</h2>
 <p>Let’s see why long data is often better for analysis.</p>
 <p>Consider again the <code>fuels_wide</code> dataset:</p>
-<div id="731a1d79" class="cell" data-execution_count="11">
+<div id="2c0f10f5" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fuels_wide.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="bad8f144" class="cell" data-execution_count="12">
+<div id="b60e979e" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fuels_long.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If we want to find the average fossil fuel consumption per country, this is very easy to do with the long format:</p>
-<div id="dfba31b2" class="cell" data-execution_count="13">
+<div id="27973bb2" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>fuels_long.groupby(<span class="st">'Entity'</span>)[<span class="st">'oil_consumption'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>But with the wide format, this is not so easy:</p>
-<div id="8eabf9f5" class="cell" data-execution_count="14">
+<div id="5045330d" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fuels_wide[[<span class="st">'y_1970'</span>, <span class="st">'y_1980'</span>, <span class="st">'y_1990'</span>, <span class="st">'y_2000'</span>, <span class="st">'y_2010'</span>, <span class="st">'y_2020'</span>]].mean(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Imagine if you had 100 years of data!</p>
@@ -567,7 +567,7 @@ Practice
 <hr>
 <p>Long data is also very useful for plotting.</p>
 <p>For example, to plot the average fossil fuel consumption per country over time, we can use the following code:</p>
-<div id="f673bbd2" class="cell" data-execution_count="15">
+<div id="77625ba0" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>subset <span class="op">=</span> fuels_long.query(<span class="st">'Entity in ["Peru", "Iran", "China"]'</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>px.line(subset, x<span class="op">=</span><span class="st">'year'</span>, y<span class="op">=</span><span class="st">'oil_consumption'</span>, color<span class="op">=</span><span class="st">'Entity'</span>, title<span class="op">=</span><span class="st">'Average Fossil Fuel Consumption per Country'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -581,19 +581,19 @@ Practice
 <p>While wide data tends to come from external sources (as we have seen above), long data, on the other hand, is likely to be created by <em>you</em> while data wrangling, especially in the course of grouped aggregations.</p>
 <p>Let’s see an example of this now.</p>
 <p>We will use a dataset of contracts granted by the city of Chicago from 2020 to 2023. You can find more information about the data <a href="https://data.cityofchicago.org/Administration-Finance/Contracts/rsxa-ify5/">here</a>.</p>
-<div id="be60e70a" class="cell" data-execution_count="16">
+<div id="5a18e5c0" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>contracts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Each row corresponds to one contract, and we have each contract’s ID number, the year in which it was granted, the amount of the contract, and the vendor’s name and address, among other variables.</p>
 <p>Now, consider the following grouped summary of the <code>contracts</code> dataset, which shows the number of contracts by state of the vendor in each year:</p>
-<div id="c962dbc2" class="cell" data-execution_count="17">
+<div id="1b263cbc" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>contracts_summary <span class="op">=</span> contracts.groupby(<span class="st">"state"</span>)[<span class="st">"year"</span>].value_counts().reset_index()</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>contracts_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The output of this grouped operation is a quintessentially “long” dataset. Each observational unit (each state) occupies multiple rows, with one row for each measurement (each year).</p>
 <p>Now, let’s see how to convert such long data into a wide format with <code>pivot()</code>.</p>
 <p>The code is quite straightforward:</p>
-<div id="02be55c1" class="cell" data-execution_count="18">
+<div id="17367463" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>contracts_wide <span class="op">=</span> contracts_summary.pivot(</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span><span class="st">"state"</span>, columns<span class="op">=</span><span class="st">"year"</span>, values<span class="op">=</span><span class="st">"count"</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
@@ -606,7 +606,7 @@ Practice
 <li><strong><code>values</code></strong> specifies which values will become the core of the wide data format. In our case, it’s the number of contracts “count”.</li>
 </ul>
 <p>You might also want to have the <em>years</em> be your primary observational units, with each year occupying one row. This can be carried out similarly to the above example, but with <code>year</code> as the index and <code>state</code> as the columns:</p>
-<div id="dde1f054" class="cell" data-execution_count="19">
+<div id="5592207d" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>contracts_wide_year <span class="op">=</span> contracts_summary.pivot(</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span><span class="st">"year"</span>, columns<span class="op">=</span><span class="st">"state"</span>, values<span class="op">=</span><span class="st">"count"</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
@@ -625,7 +625,7 @@ Practice
 <section id="practice-q-temperatures-back-to-wide" class="level2 callout-body-container callout-body" data-number="13">
 <h2 data-number="13" class="anchored" data-anchor-id="practice-q-temperatures-back-to-wide"><span class="header-section-number">13</span> Practice Q: Temperatures back to Wide</h2>
 <p>Convert the long <code>temperatures_long</code> dataset you created above back to a wide format. Your answer should have the following column names: <strong>“country”</strong>, <strong>“1994”</strong>, <strong>“1995”</strong>, and <strong>“1996”</strong>.</p>
-<div id="4a62e305" class="cell" data-execution_count="20">
+<div id="47a07a56" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -643,7 +643,7 @@ Practice
 <h2 data-number="14" class="anchored" data-anchor-id="practice-q-population-to-wide"><span class="header-section-number">14</span> Practice Q: Population to Wide</h2>
 <p>The <code>population</code> dataset shows the populations of 219 countries over time.</p>
 <p>Reshape this data into a wide format.</p>
-<div id="81ed0aea" class="cell" data-execution_count="21">
+<div id="006af9b4" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>population</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -665,7 +665,7 @@ Practice
 </section>
 <section id="solution-q-temperatures-to-long" class="level2" data-number="18">
 <h2 data-number="18" class="anchored" data-anchor-id="solution-q-temperatures-to-long"><span class="header-section-number">18</span> Solution Q: Temperatures to Long</h2>
-<div id="0515b2fb" class="cell" data-execution_count="22">
+<div id="5c9836a0" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Melt the wide data into long format</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>temperatures_long <span class="op">=</span> temperatures.melt(</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">"country"</span>], var_name<span class="op">=</span><span class="st">"year"</span>, value_name<span class="op">=</span><span class="st">"avgtemp"</span></span>
@@ -677,7 +677,7 @@ Practice
 </section>
 <section id="solution-q-eurostat-births-to-long" class="level2" data-number="19">
 <h2 data-number="19" class="anchored" data-anchor-id="solution-q-eurostat-births-to-long"><span class="header-section-number">19</span> Solution Q: Eurostat Births to Long</h2>
-<div id="fa2666db" class="cell" data-execution_count="23">
+<div id="e63bba87" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Melt the wide data into long format</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>births_long <span class="op">=</span> euro_births_wide.melt(</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">"country"</span>], var_name<span class="op">=</span><span class="st">"year"</span>, value_name<span class="op">=</span><span class="st">"births_count"</span></span>
@@ -689,7 +689,7 @@ Practice
 </section>
 <section id="solution-q-temperatures-back-to-wide" class="level2" data-number="20">
 <h2 data-number="20" class="anchored" data-anchor-id="solution-q-temperatures-back-to-wide"><span class="header-section-number">20</span> Solution Q: Temperatures back to Wide</h2>
-<div id="d8690f95" class="cell" data-execution_count="24">
+<div id="e778223b" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pivot the long data into wide format</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>temperatures_wide <span class="op">=</span> temperatures_long.pivot(</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span><span class="st">"country"</span>, columns<span class="op">=</span><span class="st">"year"</span>, values<span class="op">=</span><span class="st">"avgtemp"</span></span>
@@ -701,7 +701,7 @@ Practice
 </section>
 <section id="solution-q-population-to-wide" class="level2" data-number="21">
 <h2 data-number="21" class="anchored" data-anchor-id="solution-q-population-to-wide"><span class="header-section-number">21</span> Solution Q: Population to Wide</h2>
-<div id="34a7500d" class="cell" data-execution_count="25">
+<div id="024ccfbd" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pivot the long data into wide format</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>population_wide <span class="op">=</span> population.pivot(</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span><span class="st">"country"</span>, columns<span class="op">=</span><span class="st">"year"</span>, values<span class="op">=</span><span class="st">"population"</span></span>
